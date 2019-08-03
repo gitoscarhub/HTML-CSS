@@ -1,0 +1,99 @@
+2.0 CSS
+
+	2.1 ¿Qué es CSS?
+
+Es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en HTML. Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML; el lenguaje puede ser aplicado a cualquier documento XML. También permite aplicar estilos no visuales, como las hojas de estilo auditivas. Es una tecnología usada por muchos sitios web para crear páginas visualmente atractivas, interfaces de usuario para aplicaciones web, y GUIs para muchas aplicaciones móviles.
+CSS está diseñado principalmente para marcar la separación del contenido del documento y la forma de presentación de este, haciendo de esta manera más sencilla la actividad de los desarrolladores, ya que crean múltiples “Hojas de estilo en cascada” y las guardan por separado, permitiéndoles enfocar toda su atención en el diseño del contenido de la página propiamente dicha, eliminando la información sobre su aspecto, muchas veces repetitiva.
+Esta separación busca mejorar la accesibilidad del documento, proveer más flexibilidad y control en la especificación de características presentaciones, permitir que varios documentos HTML compartan un mismo estilo usando una sola hoja de estilos separada en un archivo .css, y reducir la complejidad y la repetición de código en la estructura del documento.
+La especificación CSS describe un esquema prioritario para determinar qué reglas de estilo se aplican si más de una regla coincide para un elemento en particular. Estas reglas son aplicadas con un sistema llamado de cascada, de modo que las prioridades son calculadas y asignadas a las reglas, así que los resultados son predecibles.
+
+
+	2.2 ¿Cómo funcionan las hojas de estilo en cascada?
+
+Las hojas de estilo CSS son un conjunto reglas que enumeran en un fichero .css y que describen el aspecto que deben tener los diferentes elementos HTML de una página.
+Lo interesante de esto es que funcionan con unafilosofía de patrones o plantillas, es decir, no es necesario especificar cada uno de los elementos, sino que se pueden definir reglas como por ejemplo estas:
+    • “Los títulos de nivel 1 y 2 han de ser de color negro y un tamaño de fuente de 16 y 14 pixeles respetivamente.”
+    • “El texto de los párrafos están alineados a la izquierda, tienen un tamaño de fuente de 12 pixeles y un color gris oscuro.”
+Veamos un ejemplo concreto de cómo se expresarían las reglas anteriores en el lenguaje de las CSS:
+
+
+h1, h2 {
+   color: black;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+p {
+  color: rgb(32,32,32);
+  text-align: left;
+}
+
+	
+	2.3 Reglas, selectores y propiedades
+
+En el ejemplo anterior tenemos un total de 3 reglas, cada una se compone de un selector que indican a qué elementos HTML aplica la regla que es el texto que precede a las llaves de apertura y cierre de la regla. En la primera regla, el selector es “h1, h2”, en la segunda “h2” y en la tercera “p”.
+Cada regla se compone a su vez de propiedades que especifican qué exactamente se hará con esos los elementos HTML a los que aplica.
+
+Algunas de las propiedades más importantes son:
+    • background-color: establece el color de fondo del elemento
+    • color: establece el color de fuente del elemento
+    • font-family: establece la fuente, o tipo de letra del elemento
+    • font-size: establece el tamaño de la fuente
+    • text-align: establece la alineación del texto (right, center, left, etcétera)
+    • background-image: establece una imagen para ser usada como fondo del elemento
+    • border-style, border-width, border-color: establece el tipo, grosor y color del borde del elemento
+    • margin-top, margin-bottom, margin-right, margin-left: establece márgenes superior, inferior, derecho e izquierdo del elemento
+Volviendo al ejemplo, el selector de la primera regla indica que se refiere a los elementos HTML <h1> y <h2> y que a ellos se aplicarán el color negro (propiedad color) y un tamaño de letra de 16 pixeles al texto (propiedad font-size).
+
+
+En términos generales, entonces, la estructura de cada regla es la siguiente:
+
+selector {
+	propiedad: valor-propiedad;
+}
+
+
+En caso de querer agrupar selectores para aplicar las mismas propiedades gráficas, se resuelve de la siguiente manera:
+
+Selector1, selector2, ..., selectorN {
+	propiedad: valor-propiedad;
+}
+
+
+	2.4 Comentarios en CSS
+
+En CSS los comentarios comienzan con /* y finalizan con */
+h1, h2 {
+/* Aquí aplico fuente Verdana a los encabezamientos tipo H1 y H2 */
+	font-family:Verdana;
+}
+
+
+	2.5 ¿Cómo vincular los estilos CSS a páginas HTML?
+
+Para ello tienes básicamente 3 opciones:
+1. Hojas de estilo CSS en línea
+La primera opción consiste en usar el atributo “style” en un elemento HTML tal como se puede ver aquí:
+<h1 style=”font-family:Verdana; color:red”>Título de nivel 1</h1>
+En este caso, no hay selector puesto que no hay elemento que seleccionar, es el que es. Por tanto, se especifican simplemente las propiedades a aplicar al elemento en cuestión. Este tipo de reglas tienen mayor prioridad de todas las reglas.
+Se suele recomendar evitar esta manera de vincular estilos CSS puesto que al tener que aplicarse a cada elemento individualmente, implican un esfuerzo y mantenimiento excesivo.
+No obstante, hay casos de uso muy concretos en los que son prácticas. 
+
+2. Hojas de estilo CSS internas
+La segunda opción es escribir las reglas dentro de un elemento <style> dentro de esta etiqueta que, a su vez, se encontraría dentro del elemento <head> de la página HTML.
+Obviamente la desventaja es que en este caso las reglas sólo son visibles para esa página concreta en las que se han declarado y no se pueden usar para otras páginas.
+
+3. Hojas de estilo CSS externas
+La última opción es la más usada y consiste en crear uno o varios ficheros con extensión “.css” en los cuales se declaran las reglas CSS.
+La manera de vincular estas reglas a una página HTML consiste en referencia el fichero .css desde esa página. De este modo se puede crear un fichero global para una web entera y usarlo en todas las páginas que se quiera. puedes colocar la hoja de estilo en el servidor web o en el disco duro. Una práctica habitual es colocar los archivos de hoja de estilo en el directorio /css del proyecto en el que estemos trabajando.
+En este caso, la declaración también se incluye dentro del elemento <head> y tiene el siguiente aspecto:
+
+<link rel="stylesheet" type="text/css" href="/css/estilos-1.css" />
+<link rel="stylesheet" type="text/css" href="/css/estilos-2.css" />
+ Aquí hay que tener también en cuenta que en el caso de usar varios ficheros el orden de inclusión marca precedencia en el orden inverso. En el caso de existir un conflicto por haber diferentes reglas con igual selector en varios ficheros, las reglas de los ficheros siguientes sobrescriben los anteriores.
+
+
+

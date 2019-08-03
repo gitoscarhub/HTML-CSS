@@ -1,0 +1,194 @@
+1.0 HTML
+
+	1.1¿Que es HTML?
+	
+HTML Es un lenguaje estándar que se utiliza principalmente para la elaboración de páginas web. Las siglas significan HyperText Markup Language (Lenguaje de Marcas de HiperTexto).
+Es un estándar a cargo del W3C (World Wide Web Consortium), organización dedicada a la estandarización de casi todas las tecnologías ligadas a la web, sobre todo en lo referente a su escritura e interpretación. Se considera el lenguaje web más importante siendo su invención crucial en la aparición, desarrollo y expansión de la web. Se ha impuesto en la visualización de páginas web y es el que todos los navegadores actuales han adoptado.
+HTML permite a los usuarios producir páginas web que incluyen texto, gráficos, vídeo, apuntadores a otras páginas web y más.
+La primera versión de HTML se define a principios de los 90´ con el nombre de HTML 1.0, la cual fue avanzando conforme los años, tomando cada actualización o mejora del estándar un numero subsiguiente; En el año 2004, la W3C reabrió el debate de la evolución de HTML; y se dieron a conocer las bases para la versión HTML5. La cual se concluyó en el año 2007 y se logró implementar recién en el año 2014. Es la que se encuentra en vigencia actualmente.
+HTML y sus mejoras a lo largo de las diferentes versiones:
+
+CUADRITO
+
+
+	1.2 Etiquetas
+
+Las etiquetas se llaman directivas, también conocidas en inglés como tags. La mayoría de las etiquetas HTML tiene este formato. Es decir, usan <algo> para marcar el comienzo de algo, y </algo> para marcar su fin.
+Las etiquetas se pueden escribir tanto en minúsculas como en mayúsculas. Por lo tanto, <head> y <HEAD> significan lo mismo, pero es mejor usar minúsculas por cuestión de compatibilidad.
+Aunque la mayoría de las etiquetas tienen su etiqueta de apertura y etiqueta de cierre, es importante aclarar que no todas las etiquetas tienen su correspondiente etiqueta de cierre.
+La etiqueta de apertura y la de cierre son las misma con la única diferencia de la diagonal "/" , es necesario la etiqueta de cierre para limitar el campo de acción de la etiqueta, por ejemplo a etiqueta <p> nos indica el inicio de un párrafo de texto y una vez que se escribe la etiqueta de apertura el navegador tomará como párrafo todo el texto que se encuentre después de dicha etiqueta hasta toparse con la etiqueta de cierre </p>y así con las demás etiquetas según la función de cada una.
+
+
+	1.2.1 Etiquetas básicas
+
+Definimos dentro de la gran variedad de etiquetas, un conjunto de etiquetas básicas para el uso de HTML.
+<html>: indica el comienzo del documento HTML.
+
+<head>: indica que empieza la cabecera de la página. En ella se suele poner el título (<title>) de la web, una descripción y otras informaciones relacionadas con el contenido de la página.
+
+<body>: es el cuerpo de la página, donde va lo que se ve en el navegador al cargar una web. En el body van los textos, las imágenes y todos los contenidos de la web.
+
+<h1>, <h2>, etc.: son los títulos o encabezados. Se utilizan para establecer determinados textos de la página como titulares, suelen tener un tamaño de fuente mayor para diferenciarlos del resto del texto. Son importantes en el posicionamiento en buscadores.
+
+<a>: define los enlaces.
+
+<table>: es una tabla, y dentro de esta tenemos filas <tr> y celdas <td>.
+
+<p>: el texto dentro de esta etiqueta forma un párrafo.
+
+<img>: imágenes.
+
+<ul>: los textos dentro de esta etiqueta se estructuran en listas. Mediante el uso de <li> definimos cada elemento dentro de la lista, y usando <ol> en lugar de <ul> tendremos listas ordenadas.
+
+<b> y <strong>: se utilizan para resaltar el texto.
+
+<u>: texto subrayado.
+
+<i> y <em>: texto en cursiva.
+
+
+	1.2.2 Etiquetas estructurales y de parrafo
+
+Dentro de la gran variedad de etiquetas HTML podemos encontrar etiquetas para diferentes funcionalidades y a su vez podemos dividirlas en grupos:
+Etiquetas estructurales
+      <html> Delimita y engloba toda la página web, que consta de cabecera y cuerpo.
+      <head> Delimita y engloba la cabecera de una página, que contiene un conjunto de informaciones que no se muestran en la ventana, entre ellas el título de la página, pero que pueden ayudar a los navegadores y a los buscadores para interpretar o a encontrar correctamente la página.
+      <title> Dentro de la cabecera (HEAD), lo que se incluye aquí se muestra en la barra del título de la ventana del navegador.
+      <body> Delimita y engloba el cuerpo de la página, que son el conjunto de informaciones (texto e imágenes) que se muestran en la página, así como las indicaciones de cómo deben mostrarse.
+Etiquetas de párrafo
+      <h1>, <h2>, …<h6> Párrafos que son encabezamientos (con distintos niveles).
+      <p> Párrafos normales.
+      <p align=¨center¨> El atributo align permite alinear el texto del párrafo. Se puede aplicar a otras etiquetas.
+      <br> Permite partir un párrafo empezando una línea nueva, pero sin dejar espacio. Esta es una etiqueta que no lleva etiqueta de cierre.
+      <hr> Pone una línea horizontal de separación. (admite atributos).
+      <blockquote> Agrega sangría al párrafo.
+
+
+	1.3 Formato de texto
+
+	Formato Físico
+      <b>texto</b>			El texto se mostrará en negrita
+      <i>texto</i>			El texto se mostrará en cursiva
+      <u>texto</u>			El texto se mostrará subrayado
+      <tt>texto</tt>			El Texto se mostrara en teletipo 
+      <strike>texto</strike>		El texto se mostrará tachado
+      <big>texto</big>		El texto se mostrará más grande
+      <small>texto</small>		El texto se mostrará más pequeño
+      <sup>texto</sup>		El texto se mostrará como un super indice
+      <sub>texto</sub>		El texto se mostrará como un subíndice
+
+	Formato Lógico
+      Cita:	 		 <cite> </cite>
+      Código:	 		<code> </code>
+      Definición:		<dfn> </dfn>
+      Énfasis:		<em> </em>
+      Grueso:		<strong> </strong>
+      Palabras clave:		<key> </key>
+      Ejemplos:		<samp> </samp>
+      Usuario:		<kbd> </kbd>
+      Variables:	 	<var> </var>
+      Ejemplo literal:		<xmp> </xmp> (ignora las etiquetas HTML de dentro)
+
+
+	1.3.1 Etiquetas anidadas:
+
+Dada la necesidad, existe la posibilidad de combinar dos o varias etiquetas para un mismo fragmento, a esto llamaremos etiquetas anidadas y la forma correcta de hacerlo es la siguiente:
+<B> <I> Éste texto aparecerá en negrita y en cursiva </I> </B>
+Prestar especial atención a la forma de utilizarlo, ya que la etiqueta que  se abre primero, es la última en cerrarse, como si fueran capas de una cebolla, que van encerrando una etiqueta, dentro de otra.
+A partir de lo antes dicho, una forma incorrecta de emplear las etiquetas HTML es la siguiente:
+<b><i>Éstas etiquetas están mal cerradas</b></i>   
+
+
+	1.4 Color
+
+HTML nos brinda la posibilidad de utilizar una variedad muy amplia de colores, tanto para los diferentes textos, como para los fondos. Para ello existen varias formas de hacerlo a través de códigos.
+Los códigos de colores son formas de representar los colores que vemos cada día en un formato que un ordenador puede interpretar y mostrar.  Hay una gran variedad de formatos, incluidos los códigos de color HEX, RGB y HSL valores y nombres de colores HTML, entre otros.
+Una de las formas más populares es a través del empleo de códigos Hex de color; tres bytes números hexadecimal (es decir, compuesto de seis dígitos), con cada byte, o de un par de caracteres en el código Hex, que representa la intensidad de rojo, verde y azul en el color, respectivamente.
+#XXXXXX
+
+Valores de bytes código Hex de 00, es la más baja intensidad de un color, a lo que representa el nivel más alto de intensidad. El color blanco, por ejemplo, se obtienen por la mezcla de los tres colores primarios en su máxima intensidad, y en el código Hex de color de #FFFFFF.
+#FFFFFF
+
+Mientras que el negro, la ausencia de cualquier color de la pantalla, es todo lo contrario, con cada color que se muestra en su nivel más bajo posible intensidad y un código de color Hex #000000.
+#000000
+
+Así mismo, podemos crear muy fácilmente los colores grises, puesto que consisten de igual intensidad de cada color:
+#454545
+#999999
+
+Los tres colores primarios, rojo, verde y azul, están elaborados con una mezcla la mayor intensidad del color deseado con la menor intensidad de los otros dos:
+#FF0000   #00FF00   #0000FF   
+
+También, existe la posibilidad (más acotada) de utilizar los colores solo nombrándolos, sin la necesidad de recordarse los códigos Hex, según la tabla que sigue. Aquí solo se citan algunos de ejemplo, siendo la lista más extensa; de todos modos y no menos importante, se debe tener en cuenta que la variedad de la paleta de colores por nombre es mucho más chica que la de códigos binarios.
+
+
+	1.4.1 ¿Cómo utilizar los colores?
+
+Como vimos anteriormente hay una variedad de formas de nombrar a los colores en HTML, pero cualquiera sea, se utilizan de la siguiente manera:
+
+<font color = ¨red¨> Este texto se mostrará en rojo </font>
+
+
+	1.5 Tamaño de texto
+
+Existen dos maneras de cambiar el tamaño de nuestra fuente, una es la que mencionamos mas arriba, haciendo referencia verbal a su tamaño ¨big¨ para la letra grande y ¨small¨ para la pequeña. Pero tenemos un método más específico que es asignándoles tamaños; ya sea por medio de valores numéricos de este modo:
+
+<font size=¨5¨> Texto más grande   </font>
+
+Por defecto el tamaño estándar es ¨3¨ y va desde 1 hasta 7.
+O bien (aconsejable) empleando unidades relativas como px que establece el valor en píxeles:
+
+<font size=14px> Se asigna un tamaño de fuente de 14 pixeles </font>
+
+
+	1.6 Tipo de fuente
+
+Existe una variedad de fuentes o tipos de letras, con las que podemos trabajar, el atributo FACE es el que nos permite modificar la misma, deberíamos tipearlo así:
+<font face="arial">Éste texto se mostrará con fuente Arial</font>
+<font face ="times new roman">Y este otro en Times New Roman</font>
+
+
+	1.7 Insertar imágenes
+
+Como todos sabemos, seria inconcebible en el día de hoy, una pagina web sin imágenes, el impacto visual hace a las paginas mucho mas atractivas, hasta incluso, efectos realmente sorprendentes.
+Para insertar una imagen en un documento HTML, se utiliza la etiqueta <img>.
+
+Las imágenes utilizadas pueden estar en formato BMP, GIF, JPEG o PNG. Estos formatos son interpretados directamente por el navegador. Las diferencias básicas entre ellos son varias:
+    • BMP: Estos gráficos soportan hasta 24 bits (16 millones de colores). Al aumentar su tamaño escalándolos, pierden calidad, es decir, se "pixelan". No acepta transparencia. Es el de mayor peso de archivo, debido a que no usa ninguna compresión.
+    • GIF: Solamente soporta 256 colores, por lo que no es adecuado para representar fotografías, pero sí es recomendado para iconos, logotipos o imágenes que tengan colores sólidos. Al aumentar su tamaño escalándolos, pierden calidad, es decir, se "pixelean". El archivo resultante es de poco peso. Soporta animaciones.
+    • PNG: Es un formato pensado como una versión mejorada del formato GIF. En este caso, una misma imagen, sin pérdidas, ocuparía menos espacio que en formato GIF (>10%). Soporta color verdadero (hasta 64 bits con canal alfa). Las imágenes en PNG permiten transparencia variable de hasta 256 niveles. El canal alfa de PNG permite utilizar una mayor profundidad de bits para lograr efectos de semi-transparencia, como los objetos translúcidos. Pero no soporta animaciones.
+    • JPEG: (más conocido como JPG) soporta hasta 16 millones de colores (24 bits) y comprime el tamaño del archivo final utilizando un algoritmo de compresión con pérdida. Es decir, que, al convertir una imagen a este formato, una parte de la información es desechada (algo parecido a lo que ocurre con los ficheros mp3 de sonido). Los editores de gráficos permiten ajustar la cantidad de información original que se quiere perder. Si se opta por la máxima compresión para obtener el menor peso posible, la imagen final puede ser muy deficiente. No permite transparencias ni animación.
+Otros formatos
+Se puede usar cualquier otro formato como el MPG o el AVI (ambos de vídeo), pero entonces el visualizador llamará a un programa auxiliar, que previamente le habremos definido, para que sea éste el que visualice el fichero. La desventaja de las imágenes en formatos no tratados por el propio visualizador es que no verás el texto junto con la imagen, y por tanto no podrás imprimir la página compuesta. para evitar esto, se utilizan los llamados "plug-in" que consisten en pequeños programas que permiten llamar a aplicaciones específicas ejecutándose como ventanas del navegador. Un ejemplo muy común son los ficheros.pdf.
+
+
+	1.7.1 ¿Cómo utilizar las imágenes?
+
+Luego de lo evaluado antes, tenemos muchas posibilidades de utilizar las imágenes, de definir su tamaño, si son centradas, si llevan texto dentro, fuera o sobre ellas. También es posible utilizarlas como ¨botones¨ o ¨enlaces¨ a diferentes funciones. Veremos la forma más simple de utilizar una imagen:
+
+<img src="insecto.gif">
+Al indicar esto, es necesario que nuestro archivo y extensión coincidan, y que nuestro documento HTML este alojado en la misma carpeta donde se encuentra esta imagen, de no ser así, deberemos especificar la ruta entera del archivo.
+	
+
+	1.7.2 Alinear imágenes u otros elementos a la página:
+
+Por defecto, una imagen de fondo se posiciona en la esquina superior izquierda de la pantalla. La propiedad background-position nos permitirá cambiar su valor por defecto y posicionar la imagen de fondo en cualquier lugar de la pantalla. Hay muchas formas diferentes de establecer los valores de la propiedad background-position. Sin embargo, todas ellas se formatean como un conjunto de coordenadas. Por ejemplo, el valor '100px 200px' posiciona la imagen de fondo a 100 píxeles del margen izquierdo y a 200 píxeles del margen superior de la ventana del navegador. Las coordenadas se pueden indicar como porcentajes del ancho de la pantalla, como unidades fijas (píxeles, centímetros, etc.) o puedes usar las palabras "top" (superior), "bottom" (inferior), "center" (centro), "left" (izquierda) y "right" (derecha). El modelo siguiente ilustra cómo funciona el sistema:
+
+	CUADRITO
+
+
+Se utilizaría de la siguiente forma:
+<backround-position=50% 100%>
+
+<backround-position=center center>
+
+
+	1.8 Insertar links:
+
+El siguiente es sin duda el elemento más importante del HTML, ya que permite realmente "navegar" por uno o varios documentos, que pueden residir en cualquier parte, pareciéndonos que siempre estamos en el mismo; a esto se le llama hipertexto ya que, con esta posibilidad, en realidad, nuestro documento puede ser infinito... En efecto, para la persona que está leyendo sobre un determinado tema, no hay diferencias ostensibles que le hagan notar dónde está el documento que lee. Para el lector, todo parece un mismo documento, cuando en realidad, probablemente el conjunto de lo que lee está repartido por medio mundo, o en un plano más modesto, el documento leído puede estar compuesto en realidad por varios cientos de páginas que "saltan" de unas a otras sin notarlo.
+
+Lo utilizaremos con la siguiente etiqueta:
+<a href="http://www.unlvirtual.edu.ar"> Link al campus de UNL</a>.
+Y se verá así:
+Link al campus de UNL
+
